@@ -1,0 +1,18 @@
+private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnefiledialog= new OpenFileDialog();
+            opnefiledialog.Title = "Select and image";
+            opnefiledialog.ShowDialog();
+
+            if (opnefiledialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = new Bitmap(opnefiledialog.FileName); 
+            }
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image= null;
+        }
